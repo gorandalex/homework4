@@ -1,0 +1,14 @@
+version: "1.1"
+
+
+services:
+  homework4:
+    build: .
+    restart: always
+    ports:
+      - 5000:5000
+    volumes:
+      - /storage/data.json:/storage/data.json
+
+
+
