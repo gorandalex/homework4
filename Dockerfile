@@ -9,8 +9,8 @@ COPY ["poetry.lock", "pyproject.toml", "/app/"]
 RUN poetry install --no-ansi --no-interaction
 
 EXPOSE 3000
-ENV TZ=Europe/Kyiv
-VOLUME "/storage/data.json"
 
 COPY . /app
+#VOLUME [ "/app/storage" ]
+
 CMD ["python", "main.py"]
